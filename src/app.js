@@ -64,8 +64,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 toggleMenu();
             }
         });
+    } */
+// Включение горизонтальной прокрутки на мобильных устройствах
+    function enableMobileScroll() {
+        if (window.innerWidth <= 768) {
+            document.querySelector('.resume-main').style.overflowX = 'auto';
+        } else {
+            document.querySelector('.resume-main').style.overflowX = 'visible';
+        }
     }
-
+// Вызываем при загрузке и изменении размера
+    window.addEventListener('load', enableMobileScroll);
+    window.addEventListener('resize', enableMobileScroll);
 
     // Обработка аватарки
   const avatar = document.getElementById("profile-avatar");
