@@ -232,7 +232,7 @@ body {
 
 .contact-text a:hover {
   color: var(--sidebar-accent);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .contact-link {
