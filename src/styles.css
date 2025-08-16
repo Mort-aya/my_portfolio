@@ -40,7 +40,53 @@ body {
   overflow: hidden;
   min-height: 100vh;
 }
+/* Мобильный заголовок */
+.mobile-header {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary);
+    color: white;
+    padding: 15px;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 60px;
+}
 
+.mobile-title {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+}
+
+.mobile-menu-toggle {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--white);
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.1);
+    min-height: 100vh;
+}
 /* Левая колонка */
 .resume-sidebar {
   flex: 0 0 300px;

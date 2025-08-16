@@ -40,36 +40,34 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   animateSkills();
 
-  // Мобильное меню
-  const menuToggle = document.querySelector(".mobile-menu-toggle");
-  const sidebar = document.querySelector(".resume-sidebar");
-  const overlay = document.createElement("div");
-  overlay.className = "sidebar-overlay";
-  document.body.appendChild(overlay);
+    // Мобильное меню
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const sidebar = document.querySelector('.resume-sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
 
-  function toggleMenu() {
-    menuToggle.classList.toggle("active");
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.style.overflow = sidebar.classList.contains("active")
-      ? "hidden"
-      : "";
-  }
-
-  menuToggle.addEventListener("click", function (e) {
-    e.stopPropagation();
-    toggleMenu();
-  });
-
-  overlay.addEventListener("click", toggleMenu);
-
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 768 && sidebar.classList.contains("active")) {
-      toggleMenu();
+    function toggleMenu() {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+        document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
     }
-  });
 
-  // Обработка аватарки
+    if (menuToggle && sidebar && overlay) {
+        menuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu();
+        });
+
+        overlay.addEventListener('click', toggleMenu);
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && sidebar.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    }
+
+
+    // Обработка аватарки
   const avatar = document.getElementById("profile-avatar");
   if (avatar) {
     const modal = document.createElement("div");
