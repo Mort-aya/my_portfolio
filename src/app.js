@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
   animateSkills();
 
     // Мобильное меню
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    /*const menuToggle = document.querySelector('.mobile-menu-toggle');
     const sidebar = document.querySelector('.resume-sidebar');
     const overlay = document.querySelector('.sidebar-overlay');
 
