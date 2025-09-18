@@ -40,31 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   animateSkills();
 
-    // Мобильное меню
-    /*const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const sidebar = document.querySelector('.resume-sidebar');
-    const overlay = document.querySelector('.sidebar-overlay');
-
-    function toggleMenu() {
-        sidebar.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
-    }
-
-    if (menuToggle && sidebar && overlay) {
-        menuToggle.addEventListener('click', function(e) {
-            e.stopPropagation();
-            toggleMenu();
-        });
-
-        overlay.addEventListener('click', toggleMenu);
-
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768 && sidebar.classList.contains('active')) {
-                toggleMenu();
-            }
-        });
-    } */
 // Включение горизонтальной прокрутки на мобильных устройствах
     function enableMobileScroll() {
         if (window.innerWidth <= 768) {
