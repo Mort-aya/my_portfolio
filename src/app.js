@@ -52,11 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('load', enableMobileScroll);
     window.addEventListener('resize', enableMobileScroll);
 
-    // Обработка аватарки
-  const avatar = document.getElementById("profile-avatar");
-  if (avatar) {
-    const modal = document.createElement("div");
-    modal.className = "avatar-modal";
 
     modal.innerHTML = `
       <span class="avatar-modal-close">&times;</span>
